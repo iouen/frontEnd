@@ -1,3 +1,10 @@
+// &:指的是父节点信息
+/*
+* https://www.w3cplus.com/preprocessor/sass-mixins-function-placeholder.html
+
+  SASS基础——十个常见的Mixins
+  https://www.w3cplus.com/preprocessor/ten-best-common-mixins.html
+*/
 @mixin clearfix {
   &:after {
     content: "";

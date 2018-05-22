@@ -5,10 +5,12 @@ import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css'// progress bar style
 import { getToken } from '@/utils/auth' // getToken from cookie
 
+// 想禁用进度环？设置 showSpinner 为 false
 NProgress.configure({ showSpinner: false })// NProgress Configuration
-
+// https://github.com/rstacruz/nprogress,https://c7sky.com/nprogress.html
 const whiteList = ['/login']// no redirect whitelist
 
+// 全局的钩子https://www.cnblogs.com/WQLong/p/8135553.html
 router.beforeEach((to, from, next) => {
   NProgress.start() // start progress bar
   if (getToken()) { // determine if there has token

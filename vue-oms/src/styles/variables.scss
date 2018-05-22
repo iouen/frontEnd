@@ -1,4 +1,32 @@
-//sidebar
+//sidebar scss语法定义变量 sass版 less版本@color:red;
+/*
+*简单总结下：如果全局申明了一个变量a，sass中如果使用到局部中是属于改变a的值，所以后来所有的都是改变之后的值；
+````
+$color:red; 
+p{   
+    $color:blue;
+    color:$color;//blue 
+}
+a{
+    color:$color;//blue 
+}
+````
+而less中使用到局部变量则属于在局部重新定义a的值，不影响其他地方。
+````
+@color:red; 
+p{ 
+    @color:blue; 
+    color:@color;//blue 
+} 
+a{ 
+    color:@color;//red 
+}
+
+````
+
+说到底，其实sass和less的变量其实都是js变量的表现形式，两者都有其科学性，只是设计思路不同而已。著作权归作者所有。
+原文: https://www.w3cplus.com/preprocessor/sass-basic-variable.html © w3cplus.com
+*/
 $menuBg:#304156;
 $subMenuBg:#1f2d3d;
 $menuHover:#001528;

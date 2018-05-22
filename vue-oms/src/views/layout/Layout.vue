@@ -1,6 +1,7 @@
 <template>
   <div class="app-wrapper" :class="classObj">
-    <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"></div>
+    // SASS基础——十个常见的Mixins
+    <div v-if="device==='mobile' && sidebar.opened" class="drawer-bg" @click="handleClickOutside"></div>
     <sidebar class="sidebar-container"></sidebar>
     <div class="main-container">
       <navbar></navbar>
@@ -45,6 +46,8 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
+  // @mixin的调用方式是@include,而%的调用方式是@extend
+  // 参考资料 https://www.w3cplus.com/preprocessor/sass-mixins-function-placeholder.html
   @import "src/styles/mixin.scss";
   .app-wrapper {
     @include clearfix;
